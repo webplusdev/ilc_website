@@ -1,0 +1,216 @@
+.header {
+
+    &__container {
+    }
+
+    &__top-header {
+        display: flex;
+        align-items: center;
+        column-gap: rem(20);
+        @include adaptive("padding-top", 48, 20);
+        @include adaptive("padding-bottom", 24, 10);
+
+        @media (max-width: $tablet) {
+            align-items: flex-start;
+        }
+        @media (max-width: $mobile) {
+            align-items: center;
+        }
+    
+    }
+
+    &__nav {
+        padding-top: rem(24);
+        
+    }
+
+    &__menu {
+    }
+}
+.top-header {
+
+    &__info {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        column-gap: rem(62);
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: rem(10);
+        }
+    }
+
+    &__logo {
+        max-width: rem(200);
+        img {
+            max-width: 100%;
+        }
+        @include adaptive("max-width", 200, 100);
+    }
+
+    &__title {
+        color: $mainDark;
+        font-size: rem(12);
+        line-height: math.div(20, 12);
+        max-width: rem(231);
+        @media (max-width: $mobile){
+            display: none;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        column-gap: rem(36);
+    }
+
+    &__call {
+        color: $mainDark;
+        font-weight: 700;
+        font-size: rem(16);
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        @media (max-width: $mobile){
+            display: none;
+        }
+        &-btn {
+            background: linear-gradient(326.06deg, #2641D1 11.53%, #3333A3 74.32%);
+            border-radius: rem(7);
+            width: rem(50);
+            height: rem(50);
+            display: none;
+            position: relative;
+            @extend %ic;
+            &::before {
+                content: '\e906';
+                color: #fff;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-size: rem(22);
+
+            }
+            @media (max-width: $mobile){
+                display: block;
+            }
+        }
+    }
+
+    &__login {
+        @media (max-width: $mobile) { 
+            display: none;
+        }
+    }
+}
+.button {
+}
+.menu {
+    
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        column-gap: rem(48);
+        row-gap: rem(10);
+        max-width: prc(900, 1280);
+        
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            
+            row-gap: rem(25);
+        }
+    }
+
+    &__item {
+    }
+
+    &__link {
+        font-size: rem(16);
+        color: #000;
+        transition: color .3s ease 0s;
+        &_login {
+            display: none;
+            @media (max-width: $mobile) { 
+                display: block;
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $mainColor;
+            }
+        }
+        @media (max-width: $tablet) { 
+            @include adaptive("font-size", 30, 20, 992, 320, 1);
+        }
+    }
+
+    @media (max-width: $tablet) {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        overflow: auto;
+        padding: rem(100) rem(15) rem(50) rem(15);
+        transition: all 0.3s ease 0s;
+        z-index: 8;
+        background-color: $bg;
+        &::before {
+            content: '';
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            left: -100%;
+            top: 0;
+            background-color: $bg;
+        }
+        &._active {
+            left: 0;
+            &::before {
+                left: 0;
+            }
+        }
+
+    }
+}
+
+.icon-menu {  
+    @media (max-width: $tablet) {
+        position: relative;
+        border-radius: rem(7);
+        display: block;
+        width: rem(50);
+        height: rem(50);
+        padding: rem(15);
+        cursor: pointer;
+        z-index: 10;
+        background-color: #DEE6EF;
+        span {
+            transition: all 0.3s ease 0s;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            width: 22px;
+            height: 2px;
+            background-color: #4614E8;
+            border-radius: rem(2);
+            &:first-child {
+                top: rem(18);
+            }
+            &:last-child {
+                bottom: rem(16);
+            }
+        }
+        &._active {
+            background-color:  #4614E8;
+            span {
+                background-color: #DEE6EF;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/_head.html',
+{
+"title": "ILC"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.html', {})
+        <main class="page page_home">
+            <section class="page__main-block main-block">
+                <div class="main-block__container">
+                    <div class="main-block__content">
+                        <h1 class="main-block__title">Юридический полис ILC — быстрое решение сложных вопросов 24/7</h1>
+                        <div class="main-block__text">Ваша личная команда профессиональных юристов, которая всегда под
+                            рукой. А
+                            также доступ к бонусам партнерской программы — доход до $260 с каждого полиса, купленного по
+                            вашему
+                            приглашению.</div>
+                        <div class="main-block__btn button">Попробовать бесплатно</div>
+                    </div>
+                    <div class="main-block__media media-block">
+                        <div class="media-block__image">
+                            <img src="@img/mainpage/mainblock/mainimage.png" alt="main">
+                        </div>
+                        <div data-da=".main-block__advantages,767.98, first" class="media-block__label label">
+                            <div class="label__body">
+                                <span>Доход до $260</span> с каждого полиса
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="main-block__advantages advantages">
+                        <div class="advantages__body">
+                            <div class="advantages__item">
+                                <div class="advantages__icon"><img src="@img/mainpage/mainblock/icons/support.png"
+                                        alt="support"></div>
+                                <div class="advantages__descr">Юридическая поддержка 24/7</div>
+                            </div>
+                            <div class="advantages__item">
+                                <div class="advantages__icon"><img src="@img/mainpage/mainblock/icons/opportunity.png"
+                                        alt="support"></div>
+                                <div class="advantages__descr">Множество возможностей в одном полисе</div>
+                            </div>
+                            <div class="advantages__item">
+                                <div class="advantages__icon"><img src="@img/mainpage/mainblock/icons/partner.png"
+                                        alt="support"></div>
+                                <div class="advantages__descr">Бонусы партнёрской программы</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        @@include('html/_footer.html', {})
+    </div>
+    <!-- @@include('html/_popup.html', {}) -->
+    @@include('html/_js.html', {})
+</body>
+
+</html>
