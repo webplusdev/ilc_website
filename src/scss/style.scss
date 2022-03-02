@@ -137,6 +137,21 @@ body {
 
     &__main-block {
     }
+
+    &__service {
+    }
+}
+
+.text {
+    line-height: math.div(21, 14);
+    color: $mainDark;
+}
+
+.title {
+    font-size: rem(32);
+    line-height: math.div(44,32);
+    font-weight: 700;
+    color: $mainDark;
 }
 
 //@import "./libs/tippy";

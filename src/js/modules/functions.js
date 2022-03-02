@@ -302,9 +302,9 @@ export let bodyLock = (delay = 500) => {
         let lock_padding = document.querySelectorAll("[data-lp]");
         for (let index = 0; index < lock_padding.length; index++) {
             const el = lock_padding[index];
-            // el.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').off
+            el.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetHeight;
         }
-        //body.style.paddingRight = window.innerWidth = document.querySelector('.wrapper').offsetHeight
+        body.style.paddingRight = window.innerWidth = document.querySelector('.wrapper').offsetHeight;
         document.documentElement.classList.add("lock");
 
         bodyLockStatus = false;
@@ -318,21 +318,23 @@ export let bodyLock = (delay = 500) => {
 export function menuInit() {
 
     const icon_menu = document.querySelector('.icon-menu');
-
-    // if (icon_menu) {
-    //     icon_menu.addEventListener("click", function (e) {
-    //         if(bodyLockStatus) {
-    //             bodyLockToggle();
-    //             document.documentElement.classList.toggle("menu-open");
-    //         }
-    //     })
-    // }
     const menu_body = document.querySelector('.menu');
 
-    icon_menu.classList.toggle('_active');
-    if (icon_menu.classList.contains('_active')) {
-        menu_body.classList.add('_active');
-    } else {
-        menu_body.classList.remove('_active');
+    if (icon_menu) {
+        icon_menu.addEventListener("click", function (e) {
+            if (bodyLockStatus) {
+                bodyLockToggle();
+                //document.documentElement.classList.toggle("menu-open");
+                icon_menu.classList.toggle('_active');
+                if (icon_menu.classList.contains('_active')) {
+                    menu_body.classList.add('_active');
+                } else {
+                    menu_body.classList.remove('_active');
+                }
+            }
+        })
     }
+
+
+
 }

@@ -1,6 +1,7 @@
 
 .main-block {
     @include adaptive("padding-top", 31, 10);
+    @include adaptive("padding-bottom", 72, 10);
     &__container {
         
         display: grid;
@@ -47,8 +48,6 @@
     }
 
     &__text {
-        line-height: math.div(21, 14);
-        color: $mainDark;
         @include adaptive("font-size", 14, 12);
         &:not(:last-child) {
             margin-bottom: rem(32);
@@ -68,7 +67,6 @@
     &__advantages {
     }
 }
-
 .media-block {
     position: relative;
     &__image {
@@ -114,7 +112,6 @@
         }
     }
 }
-
 .label__body {
     font-size: rem(14);
     line-height: math.div(16, 14);
@@ -198,3 +195,277 @@
     }
 
 }
+
+ 
+.service-block {
+    @include adaptive("padding-top", 72, 10);
+    @include adaptive("padding-bottom", 72, 10);
+    &__container {
+        display: grid;
+        @include adaptive("column-gap", 40, 20);
+
+        @media (min-width: $tablet) {
+            grid-template-columns: prc(375, 1062) prc(550, 1062);
+            justify-content: space-between;
+        }
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__content {
+    }
+
+    &__items {
+    }
+
+    &__support {
+    }
+    @media (min-width: $tablet) {
+        @include adaptive("padding-right", 111, 0, 1440, 991);
+        @include adaptive("padding-left", 111, 0, 1440, 991);
+ 
+    }
+}
+.content-service {
+    padding-right: rem(20);
+    padding-top: rem(31);
+    &__logo {
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+        @include adaptive("font-size", 32, 24);
+    }
+
+    &__text {
+        @include adaptive("font-size", 14, 12);
+        
+        @media (max-width: $tablet) {
+            max-width: 80%;
+        }
+        @media (max-width: $mobile) {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: $tablet) {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+        &:not(:last-child) {
+            @include adaptive("margin-bottom", 40, 24);
+        }
+    }
+}
+
+.items-service {
+    justify-self: end;
+    align-self: start;
+    &__body {
+        display: grid;
+        @include adaptive("gap", 25, 16);
+        grid-template-columns: repeat(2, minmax(auto, rem(220)));
+    }
+
+    &__item {
+    }
+    @media (min-width: $tablet) {
+        @include adaptive("padding-right", 113, 0, 1440, 1200);
+    }
+    @media (max-width: $tablet) {
+        justify-self: center;
+    }
+}
+.item-service {
+    background: linear-gradient(236.29deg, #FFFFFF 29.99%, #F4F9FF 79.17%);
+    box-shadow: 0px 4px 100px rgba(208, 218, 227, 0.57);
+    border-radius: rem(10);
+    @include adaptive("padding", 32, 16);
+
+    &__title {
+        font-size: rem(48);
+        line-height: math.div(44,48);
+        font-weight: 700;
+        background: -webkit-linear-gradient(-90deg, #4614E8 0%, #BCA7FF 100%),
+        -webkit-linear-gradient(-90deg, #7247FF, #7247FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+            @include adaptive("margin-bottom", 15, 5, 1440, 992);
+        }
+        span {
+            font-size: rem(16);
+            @include adaptive("font-size", 16, 10);
+            margin-left: -5%;
+        }
+        &_sirius {
+            font-size: rem(16);
+            text-transform: uppercase;
+            letter-spacing: 0.17em;
+            line-height: math.div(44,16);
+            @include adaptive("font-size", 16, 10, 767.98, 320);
+        }
+        &_top-right, &_bottom-left {
+            font-size: rem(36);
+            line-height: math.div(44,36);
+            @include adaptive("font-size", 36, 32);
+        }
+        &_top-left {
+            &:not(:last-child) {
+                @include adaptive("margin-bottom", 30, 5);
+            }
+            @include adaptive("font-size", 48, 32);
+        }
+    }
+
+    &__descr {
+        font-size: rem(14);
+        line-height: math.div(21, 14);
+        color: $dark2;
+        font-size: rem(14);
+        @include adaptive("font-size", 14, 10, 767.98, 320);
+        &_1 {
+            padding-right: prc(41, 217);
+        }
+
+       
+    }
+
+    &:first-child {
+        align-self: end;
+        justify-self: end;
+        
+    }
+
+    &:nth-child(2) {
+        position: relative;
+        justify-self: start;
+        align-self: end;
+        max-width: rem(190);
+        &::before {
+            content: '';
+            background: url('@img/mainpage/service/circle.png');
+            width: rem(159);
+            height: rem(159);
+            position: absolute;
+            z-index: -2;
+            right: prc(-33, 179);
+            top: prc(-50, 135);
+        }
+
+    }
+    &:nth-child(3) {
+        justify-self: end;
+        align-self: start;
+        position: relative;
+        max-width: rem(190);
+        &::before {
+            content: '';
+            background: url('@img/mainpage/service/circle.png') no-repeat center center / cover;
+            width: rem(39);
+            height: rem(39);
+            position: absolute;
+            z-index: -2;
+            left: prc(-13,170);
+            top: prc(-15,135);
+        }
+    }
+
+    &:nth-child(4) {
+        justify-self: left;
+        align-self: start;
+        position: relative;
+        &::before {
+            content: '';
+            background: url('@img/mainpage/service/circle.png') no-repeat center center / cover;
+            width: rem(25);
+            height: rem(25);
+            position: absolute;
+            z-index: -2;
+            left: prc(-13, 171);
+            top: prc(30,192);
+        }
+    }
+
+}
+.support-service {
+    
+    padding-top: rem(48);
+    &__title {
+        font-size: rem(16);
+        line-height: math.div(24, 16);
+        text-align: center;
+        color: $mainDark;
+        font-weight: 700;
+        &:not(:last-child) {
+            margin-bottom: rem(31);
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+        gap: rem(16);
+
+    }
+
+    &__item {
+    }
+    @media (min-width: $tablet) {
+        grid-column: 1 / span 2;
+    }
+}
+.item-support {
+    background-color: #FFFFFF;
+    border-radius: rem(10);
+    padding: rem(32);
+    @include adaptive("padding", 32, 24, 768, 320);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__icon {
+        max-width: rem(159);
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+        img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: rem(16);
+        line-height: math.div(24, 16);
+        color: $mainDark;
+        font-weight: 700;
+        align-self: flex-start;
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+        @media (max-width: $tablet) {
+            align-self: center;
+            @include adaptive("font-size", 16, 14, 992, 320);
+        }
+    }
+
+    &__text {
+        font-size: rem(14);
+        line-height: math.div(24, 14);
+        color: $dark2;
+        padding-right: rem(10);
+        @include adaptive("font-size", 14, 12, 992, 320);
+    }
+    @media (max-width: $tablet) {
+        text-align: center;
+        justify-content: center;
+    }
+}
+

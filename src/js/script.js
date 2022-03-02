@@ -44,10 +44,11 @@ function main() {
 
         if (targetEl.closest('.icon-menu')) {
             scriptFunc.menuInit();
+            e.preventDefault();
         }
 
 
-        e.preventDefault();
+
     }
 
     //     if (targetEl.closest('.menu-top-header__link_catalog')) {

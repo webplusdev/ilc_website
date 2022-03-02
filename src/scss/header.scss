@@ -118,21 +118,13 @@
         column-gap: rem(48);
         row-gap: rem(10);
         max-width: prc(900, 1280);
-        
         @media (max-width: $tablet) {
             flex-direction: column;
-            
             row-gap: rem(25);
         }
     }
 
     &__item {
-    }
-
-    &__link {
-        font-size: rem(16);
-        color: #000;
-        transition: color .3s ease 0s;
         &_login {
             display: none;
             @media (max-width: $mobile) { 
@@ -147,6 +139,22 @@
         @media (max-width: $tablet) { 
             @include adaptive("font-size", 30, 20, 992, 320, 1);
         }
+    }
+
+    &__link {
+        font-size: rem(16);
+        color: #000;
+        transition: color .3s ease 0s;
+        @media (max-width: $tablet) { 
+            @include adaptive("font-size", 30, 20, 992, 320, 1);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $mainColor;
+            }
+            
+        }
+        
     }
 
     @media (max-width: $tablet) {
@@ -168,10 +176,24 @@
             left: -100%;
             top: 0;
             background-color: $bg;
+            transition: all 0.3s ease 0s;
+        }
+        &::after {
+            content: '';
+            position: fixed;
+            width: 100%;
+            height: 30px;
+            left: -100%;
+            bottom: 0;
+            background-color: $bg;
+            transition: all 0.3s ease 0s;
         }
         &._active {
             left: 0;
             &::before {
+                left: 0;
+            }
+            &::after {
                 left: 0;
             }
         }
