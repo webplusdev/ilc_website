@@ -18,7 +18,7 @@ scriptFunc.isWebp();
 //Add loaded for HTML
 //scriptFunc.addLoadedClass();
 //Tabs
-//scriptFunc.tabs();
+scriptFunc.tabs();
 //Show more
 //scriptFunc.showMore();
 //Burger

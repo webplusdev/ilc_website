@@ -142,6 +142,14 @@ body {
     }
     &__benefits {
     }
+    &__plans {
+    }
+    &__partnership {
+    }
+    &__steps {
+    }
+    &__forecast {
+    }
 }
 
 .text {
@@ -150,10 +158,37 @@ body {
 }
 
 .title {
-    font-size: rem(32);
+    //font-size: rem(32);
     line-height: math.div(44,32);
     font-weight: 700;
     color: $mainDark;
+    @include adaptive("font-size", 32, 24);
+    &_white {
+        color: #fff;
+    }
+}
+
+.list-item {
+    position: relative;
+    padding-left: rem(24);
+    font-size: rem(14);
+    line-height: math.div(21, 14);
+    color: $dark2;
+    @include adaptive("font-size", 14, 12);
+    &:not(:last-child) {
+        @include adaptive("margin-bottom", 24, 5);
+        //margin-bottom: rem(24);
+    }
+    &::before {
+        position: absolute;
+        content: '\e903';
+        @extend %ic;
+        color: #2840CD;
+        font-size: rem(12);
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 //@import "./libs/tippy";
