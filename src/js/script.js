@@ -4,7 +4,7 @@
 //Dynamic adaptivity
 import "./libs/dynamic_adapt.js"
 //Pop-up
-//import "./libs/popup.js";
+import "./libs/popup.js";
 //import "./libs/tippy.js";
 //import "./libs/slider.js";
 

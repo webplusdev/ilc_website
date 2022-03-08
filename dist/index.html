@@ -21,7 +21,7 @@
                         <div class="top-header__actions">
                                 <a href="tel:88005113768" class="top-header__call-btn "></a>
                                 <a href="tel:88005113768" class="top-header__call">8 (800) 511-37-68</a>
-                                <button class="top-header__login button">Войти</button>
+                                <a href="#popup1" class="top-header__login button popup-link">Войти</a>
                         </div>
                         <nav class="menu-mobile">
                                 <button type="button" class="menu-mobile__icon icon-menu">
@@ -63,7 +63,7 @@
                             также доступ к бонусам партнерской программы — доход до $260 с каждого полиса, купленного по
                             вашему
                             приглашению.</div>
-                        <div class="main-block__btn button">Попробовать бесплатно</div>
+                        <a href="#popup" class="main-block__btn button popup-link">Попробовать бесплатно</a>
                     </div>
                     <div class="main-block__media media-block">
                         <div class="media-block__image">
@@ -179,7 +179,7 @@
                                         Чем могу вам помочь?
                                     </span>
 
-                                    <div class="media-benefits__btn">Задайте вопрос</div>
+                                    <button class="media-benefits__btn">Задайте вопрос</button>
                                 </div>
                             </div>
 
@@ -556,7 +556,7 @@
                             </div>
                         </div>
 
-                        <div class="steps-block__item item-steps">
+                        <div class="steps-block__item item-steps item-steps_3">
                             <div class="item-steps__icon"><img src="img/mainpage/steps/strategy.png" alt="strategy">
                             </div>
                             <div class="item-steps__number"><span>3</span></div>
@@ -601,12 +601,120 @@
                     </div>
                 </div>
             </section>
-        </main>
-        <footer>
+            <section class="page__leadership leadership-block">
+                <div class="leadership-block__container">
+                    <div class="leadership-block__media">
+                        <div class="leadership-block__img">
+                            <img src="img/mainpage/leadership/leadership.jpg" alt="leadership">
 
+                        </div>
+                        <div class="leadership-block__quote">
+                            <span>
+                                Я лично буду поддерживать вас на всех этапах развития в программе. Обращайтесь ко
+                                мне с
+                                любым вопросом email.
+                            </span>
+
+                        </div>
+                    </div>
+                    <div class="leadership-block__content content-leadership">
+                        <div class="content-leadership__label">Руководитель ООО ILC</div>
+                        <div class="content-leadership__title title">Наталья Гуторова</div>
+                        <div class="content-leadership__subtitle">10 лет в управлении и юриспруденции</div>
+                        <div class="content-leadership__text">Мы стараемся окружить заботой и создать максимально
+                            комфортные условия для развития каждого партнера:
+                            <ul>
+                                <li>личный наставник,</li>
+                                <li>пошаговое обучение,</li>
+                                <li>готовые инструменты для продвижения и мгновенные выплаты бонусов.</li>
+                            </ul>
+                            <br>
+                            Больше деталей партнерской программы смотрите в личном кабинете после регистрации.
+                        </div>
+                        <div class="content-leadership__btn button">Зарегистрироваться</div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+
+    <div class="footer__top top-footer">
+        <div class="top-footer__container">
+            <div class="top-footer__col top-footer__col_1">
+                <div class="top-footer__logo"><img src="img/icons/logo.svg" alt="logo"></div>
+                <div class="top-footer__subtitle">Первый цифровой международный юридический центр</div>
+            </div>
+            <div class="top-footer__col top-footer__col_2">
+                <div class="top-footer__social social-footer">
+                    <a href="#" class="social-footer__link social-footer__link_vk"></a>
+                    <a href="#" class="social-footer__link social-footer__link_ig"></a>
+                    <a href="#" class="social-footer__link social-footer__link_twt"></a>
+                    <a href="#" class="social-footer__link social-footer__link_fb"></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="footer__bottom bottom-footer">
+        <div class="bottom-footer__container">
+            <div class="bottom-footer__copy">
+                &copy2021 «International Legal Center» | Разработано: effex-it.com
+            </div>
+            <div class="bottom-footer__details">
+                <a href="#" class="bottom-footer__link">Политика конфиденциальности</a>
+                <a href="#" class="bottom-footer__link">Пользовательское соглашение </a>
+            </div>
+        </div>
+
+    </div>
 </footer>
     </div>
-    
+    <div id="popup" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#header" class="popup__close close-popup">X</a>
+            <div class="popup__title">Заполните простую форму, чтобы получить доступ</div>
+            <div class="popup__form form-popup">
+                <form action="#" id="form" class="form-popup__body">
+                    <div class="form-popup__item">
+                        <input autocomplete="off" type="text" name="name" placeholder="Ваше имя"
+                            class="form-popup__input" id="formName">
+                    </div>
+                    <div class="form-popup__item">
+                        <input autocomplete="off" type="email" placeholder="Ваш email" name="email"
+                            class="form-popup__input" id="formEmail">
+                    </div>
+                    <button type="submit" class="form-popup__button button">Получить доступ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="popup1" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#header" class="popup__close close-popup">X</a>
+            <div class="popup__title">Вход в личный кабинет</div>
+            <div class="popup__form form-popup">
+                <form action="#" id="form" class="form-popup__body">
+                    <div class="form-popup__item">
+                        <input autocomplete="off" type="text" name="name" placeholder="Ваше имя"
+                            class="form-popup__input" id="formName">
+                    </div>
+                    <div class="form-popup__item">
+                        <input autocomplete="off" type="email" placeholder="Ваш email" name="email"
+                            class="form-popup__input" id="formEmail">
+                    </div>
+                    <button type="submit" class="form-popup__button button">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="js/script.min.js"></script>
 </body>
 
