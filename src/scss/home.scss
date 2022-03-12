@@ -1,7 +1,7 @@
 
 // main-block
 .main-block {
-    @include adaptive("padding-top", 31, 10);
+    @include adaptive("padding-top", 240, 120);
     @include adaptive("padding-bottom", 72, 10);
     &__container {
         

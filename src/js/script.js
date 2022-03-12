@@ -7,6 +7,7 @@ import "./libs/dynamic_adapt.js"
 import "./libs/popup.js";
 //import "./libs/tippy.js";
 //import "./libs/slider.js";
+import "./libs/scrollHeader.js";
 
 import * as scriptFunc from "./modules/functions.js";
 //Add webp format
@@ -47,9 +48,9 @@ function main() {
             e.preventDefault();
         }
 
-
-
     }
+
+
 
     //     if (targetEl.closest('.menu-top-header__link_catalog')) {
     //         //const catalogLink = targetEl.closest('.menu-top-header__link_catalog');
